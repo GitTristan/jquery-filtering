@@ -14,4 +14,22 @@ $(document).ready(function() {
 		 "background-size", "cover");
 	});
 
+	$(".high").on("click", function() {
+		$(".image-container .home").sort(function(a, b) {
+			var compA = $(a).data('price');
+			var compB = $(b).data('price');
+			return (compA > compB) ? -1 : (compA < compB) ? 1 : 0;
+		}).appendTo(".image-container");
+	});
+
+	$(".low").on("click", function() {
+    $(".image-container .home").sort(function(a, b) {
+      var compA = $(a).data('price');
+      var compB = $(b).data('price');
+      return (compA < compB) ? -1 : (compA > compB) ? 1 : 0;
+    }).appendTo(".image-container");
+  });
+
+
+
 })
