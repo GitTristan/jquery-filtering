@@ -146,7 +146,6 @@ span.dark {
 	background: url("img/dark_wood.png") no-repeat;
 }
 span.darker {
-	background-size: cover;
 	background: url("img/forest.jpg") no-repeat;
 }
 span.light {
