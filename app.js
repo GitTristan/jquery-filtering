@@ -32,6 +32,21 @@ $(document).ready(function() {
 		event.preventDefault();
   });
 
+	// $(":checkbox data-value[50000]").on("click", function(i, val) {
+	// 	$(".home").hide();
+	// 	var array50k = [];
+	// 	for(i = 0; i > array.length; i++);
+	// 	val.push(array50k)????
+	// });
+
+	$(".filters input:checkbox").on("click", function() {
+	  $(".home").hide();
+		var min = $(this).data("min");
+		var max = $(this).data("max");
+		$(".home").filter(function(i, home) {
+			return $(this).data("price") >= min && $(this).data("price") < max;
+		}).show();
+	});
 
 
 })
