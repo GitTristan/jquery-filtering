@@ -20,6 +20,7 @@ $(document).ready(function() {
 			var compB = $(b).data('price');
 			return (compA > compB) ? -1 : (compA < compB) ? 1 : 0;
 		}).appendTo(".image-container");
+		event.preventDefault();
 	});
 
 	$(".low").on("click", function() {
@@ -28,6 +29,7 @@ $(document).ready(function() {
       var compB = $(b).data('price');
       return (compA < compB) ? -1 : (compA > compB) ? 1 : 0;
     }).appendTo(".image-container");
+		event.preventDefault();
   });
 
 
